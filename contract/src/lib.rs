@@ -25,7 +25,6 @@ impl Contract {
   #[init]
   #[private] // Public - but only callable by env::current_account_id()
   pub fn init(beneficiary: AccountId) -> Self {
-    assert!(!env::state_exists(), "Already initialized");
     Self {
       beneficiary,
       donations: UnorderedMap::new(b"d"),
