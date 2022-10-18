@@ -8,7 +8,6 @@ use near_sdk::json_types::U128;
 
 pub const STORAGE_COST: u128 = 1_000_000_000_000_000_000_000;
 
-#[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize, Serialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct Donation {
